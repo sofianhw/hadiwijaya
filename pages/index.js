@@ -5,20 +5,19 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Sofian Hadiwijaya`</title>
+        <title>Hadiwijaya`</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="keywords" content="sofianhw, sofian, hadiwijaya, sofian hadiwijaya" />
-        <meta name="description" content="Sofian Hadiwijaya atau biasa dikenal sofianhw, adalah seorang konsultan dibidang teknologi dan perusahaan rintisan"/>
+        <meta name="description" content="Hadiwijaya adalah perusahaan konsultan dibidang teknologi dan perusahaan rintisan"/>
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Hi! My name is <br />
-          Sofian <a href="https://hadiwijaya.co.id">Hadiwijaya!</a>
+          Hello World! <br />
         </h1>
 
         <p className={styles.description}>
-          If you have some Ideas <br />
+          We are cooking something interesting.. <br />
           Please reach me on <a href="https://www.linkedin.com/in/sofianhw/">Linkedin</a>
         </p>
       </main>
