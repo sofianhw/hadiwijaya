@@ -35,6 +35,9 @@ export default function Layout({ children }) {
           <Link href="/">
             <a style={{ color: router.pathname === '/' ? '#fff' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, fontSize: '0.95rem', transition: 'color 0.2s' }}>Home</a>
           </Link>
+          <Link href="/team">
+            <a style={{ color: router.pathname === '/team' ? '#fff' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, fontSize: '0.95rem', transition: 'color 0.2s' }}>Team</a>
+          </Link>
           <Link href="/playground">
             <a style={{ color: router.pathname === '/playground' ? '#fff' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, fontSize: '0.95rem', transition: 'color 0.2s' }}>Playground</a>
           </Link>
