@@ -1,0 +1,26 @@
+# Hadiwijaya | AI Consulting & Solutions
+
+Hadiwijaya is an elite technology consulting firm specializing in Artificial Intelligence, Machine Learning infrastructure, and digital transformation. Founded by Sofian Hadiwijaya, the firm provides strategic guidance and engineering expertise to help enterprises scale using cutting-edge technology.
+
+## Core Services
+- **Strategic AI Consulting**: Identifying high-impact automation and predictive modeling opportunities within business workflows.
+- **Custom ML Infrastructure**: Engineering scalable machine learning pipelines, fine-tuning Large Language Models (LLMs), and building proprietary prediction engines.
+- **AI Playground**: A secure sandbox environment for testing conversational AI models and experimental features using a Bring Your Own Key (BYOK) model.
+- **Verified Integrations**: Expert implementation of secure OAuth integrations adhering to Google Auth platform standards.
+
+## The Team
+- **Sofian Hadiwijaya (Founder & Principal AI Consultant)**: A Forbes 30 Under 30 Asia honoree, "Developer Hero" award winner, and former CTO of Warung Pintar. Expertise in digital banking, AI, and large-scale technical architectures.
+
+## Technical Stack
+- **Framework**: Next.js 10.x (Pages Router)
+- **Frontend**: React 17.x, Vanilla CSS (Modern Dark Theme)
+- **APIs**: Node.js Proxy APIs for secure LLM integration
+- **Deployment**: Vercel
+
+## Legal & Compliance
+- **App Domain**: hadiwijaya.co
+- **Policies**: Comprehensive Privacy Policy and Terms of Service are available on-site to support Google OAuth verification.
+
+## Contact
+- **Website**: https://hadiwijaya.co
+- **LinkedIn**: https://www.linkedin.com/in/sofianhw/
