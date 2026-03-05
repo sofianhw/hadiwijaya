@@ -12,29 +12,30 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <span style={{ color: '#0070f3' }}>Hadiwijaya</span>
-        </h1>
-
-        <p className={styles.description}>
-          Empowering your business with cutting-edge <b>Artificial Intelligence</b> solutions.
-        </p>
+        <div className={styles.hero}>
+          <h1 className={styles.title}>
+            Architecting the future with <span>AI.</span>
+          </h1>
+          <p className={styles.description}>
+            Hadiwijaya provides elite AI consulting, engineering custom machine learning models that transform enterprises and accelerate growth.
+          </p>
+        </div>
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <h3>AI Consulting &rarr;</h3>
-            <p>Expert guidance on integrating AI into your existing workflows to maximize efficiency.</p>
+            <h3>Strategic AI Consulting</h3>
+            <p>We analyze your business workflows to identify high-impact opportunities for automation, generative AI, and predictive modeling.</p>
           </div>
 
           <div className={styles.card}>
-            <h3>Custom ML Models &rarr;</h3>
-            <p>Tailor-made machine learning models designed specifically for your unique business needs.</p>
+            <h3>Custom ML Infrastructure</h3>
+            <p>From fine-tuning LLMs to building proprietary prediction engines, we engineer scalable machine learning pipelines for your unique data.</p>
           </div>
 
           <Link href="/playground">
             <a className={styles.card}>
-              <h3>AI Playground &rarr;</h3>
-              <p>Explore and test our latest AI capabilities, interactive demos, and experimental tools.</p>
+              <h3>Interactive Playground &rarr;</h3>
+              <p>Experience our capabilities firsthand. Test conversational AI models and experimental features in our secure sandbox environment.</p>
             </a>
           </Link>
         </div>

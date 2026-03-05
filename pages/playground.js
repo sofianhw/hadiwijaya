@@ -57,57 +57,58 @@ export default function Playground() {
         <title>AI Playground | Hadiwijaya</title>
       </Head>
 
-      <main className={styles.main} style={{ justifyContent: 'flex-start', paddingTop: '4rem', width: '100%', maxWidth: '800px', margin: '0 auto' }}>
-        <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>AI Playground</h1>
-        <p>Test out conversational AI using your own OpenAI API key.</p>
+      <main className={styles.pageContainer}>
+        <h1 className={styles.pageTitle}>AI Playground</h1>
+        <p className={styles.pageSubtitle}>Test out conversational AI using your own OpenAI API key.</p>
 
-        <div style={{ width: '100%', marginBottom: '2rem' }}>
+        <div className={styles.inputGroup}>
           <input 
             type="password" 
             placeholder="Enter your OpenAI API Key (sk-...)" 
             value={apiKey} 
             onChange={e => setApiKey(e.target.value)}
-            style={{ width: '100%', padding: '0.75rem', borderRadius: '5px', border: '1px solid #ccc', fontSize: '1rem' }}
+            className={styles.input}
           />
-          <small style={{ color: '#666', display: 'block', marginTop: '0.5rem' }}>Your API key is only used for this session and is not stored on our servers.</small>
+          <small style={{ color: 'var(--text-secondary)', display: 'block', marginTop: '0.75rem', fontSize: '0.85rem' }}>Your API key is only used for this session and is not stored on our servers.</small>
         </div>
 
-        <div style={{ width: '100%', flex: 1, border: '1px solid #eaeaea', borderRadius: '10px', padding: '1.5rem', overflowY: 'auto', minHeight: '400px', maxHeight: '500px', display: 'flex', flexDirection: 'column', backgroundColor: '#fafafa' }}>
+        <div className={styles.chatBox}>
           {messages.length === 0 ? (
-            <div style={{ color: '#888', textAlign: 'center', marginTop: '2rem' }}>No messages yet. Start a conversation!</div>
+            <div style={{ color: 'var(--text-secondary)', textAlign: 'center', marginTop: '2rem' }}>No messages yet. Start a conversation!</div>
           ) : (
             messages.map(m => (
-              <div key={m.id} style={{ marginBottom: '1rem', textAlign: m.role === 'user' ? 'right' : 'left' }}>
-                <span style={{ display: 'inline-block', padding: '0.75rem 1rem', borderRadius: '10px', background: m.role === 'user' ? '#0070f3' : '#fff', color: m.role === 'user' ? 'white' : 'black', maxWidth: '85%', border: m.role === 'user' ? 'none' : '1px solid #eaeaea', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>
-                  <strong style={{ display: 'block', marginBottom: '0.25rem', fontSize: '0.8rem', opacity: 0.8 }}>{m.role === 'user' ? 'You' : 'AI Assistant'}</strong>
+              <div key={m.id} className={styles.messageWrapper} style={{ alignItems: m.role === 'user' ? 'flex-end' : 'flex-start' }}>
+                <span className={`${styles.message} ${m.role === 'user' ? styles.messageUser : styles.messageAi}`}>
+                  <strong className={styles.messageLabel}>{m.role === 'user' ? 'You' : 'AI Assistant'}</strong>
                   {m.content}
                 </span>
               </div>
             ))
           )}
           {isLoading && (
-            <div style={{ textAlign: 'left', marginBottom: '1rem' }}>
-               <span style={{ display: 'inline-block', padding: '0.75rem 1rem', borderRadius: '10px', background: '#fff', border: '1px solid #eaeaea', color: '#666' }}>
+            <div className={styles.messageWrapper} style={{ alignItems: 'flex-start' }}>
+               <span className={`${styles.message} ${styles.messageAi}`} style={{ color: 'var(--text-secondary)' }}>
                   Typing...
                </span>
             </div>
           )}
           {error && (
-            <div style={{ color: 'red', marginTop: '1rem', textAlign: 'center', padding: '1rem', border: '1px solid red', borderRadius: '5px', backgroundColor: '#fff0f0' }}>
+            <div style={{ color: '#ef4444', marginTop: '1rem', textAlign: 'center', padding: '1rem', border: '1px solid rgba(239, 68, 68, 0.2)', borderRadius: '8px', backgroundColor: 'rgba(239, 68, 68, 0.05)' }}>
               Error: {error.message}
             </div>
           )}
         </div>
 
-        <form onSubmit={handleSubmit} style={{ width: '100%', display: 'flex', marginTop: '1.5rem' }}>
+        <form onSubmit={handleSubmit} className={styles.chatForm}>
           <input
             value={input}
             onChange={handleInputChange}
             placeholder={apiKey ? "Type your message..." : "Please enter your API key first"}
             disabled={!apiKey || isLoading}
-            style={{ flex: 1, padding: '0.75rem', borderRadius: '5px 0 0 5px', border: '1px solid #ccc', fontSize: '1rem' }}
+            className={styles.input}
+            style={{ marginBottom: 0 }}
           />
-          <button type="submit" disabled={!apiKey || isLoading} style={{ padding: '0.75rem 1.5rem', background: apiKey ? '#0070f3' : '#ccc', color: 'white', border: 'none', borderRadius: '0 5px 5px 0', cursor: apiKey ? 'pointer' : 'not-allowed', fontSize: '1rem', fontWeight: 'bold' }}>
+          <button type="submit" disabled={!apiKey || isLoading} className={styles.button}>
             Send
           </button>
         </form>

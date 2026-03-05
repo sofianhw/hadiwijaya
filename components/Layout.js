@@ -1,7 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Layout({ children }) {
+  const router = useRouter();
+
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Head>
@@ -12,50 +15,52 @@ export default function Layout({ children }) {
         display: 'flex', 
         justifyContent: 'space-between', 
         alignItems: 'center', 
-        padding: '1.5rem 2rem', 
-        borderBottom: '1px solid #eaeaea',
-        backgroundColor: '#fff',
+        padding: '1.25rem 2rem', 
+        borderBottom: '1px solid var(--card-border)',
+        backgroundColor: 'var(--header-bg)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
         position: 'sticky',
         top: 0,
         zIndex: 100
       }}>
         <div>
           <Link href="/">
-            <a style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#0070f3', textDecoration: 'none' }}>
-              Hadiwijaya
+            <a style={{ fontSize: '1.5rem', fontWeight: '700', color: '#fff', textDecoration: 'none', letterSpacing: '-0.02em' }}>
+              Hadiwijaya<span style={{ color: 'var(--accent-color)' }}>.</span>
             </a>
           </Link>
         </div>
-        <nav style={{ display: 'flex', gap: '1.5rem' }}>
+        <nav style={{ display: 'flex', gap: '2rem' }}>
           <Link href="/">
-            <a style={{ color: '#333', textDecoration: 'none', fontWeight: 500 }}>Home</a>
+            <a style={{ color: router.pathname === '/' ? '#fff' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, fontSize: '0.95rem', transition: 'color 0.2s' }}>Home</a>
           </Link>
           <Link href="/playground">
-            <a style={{ color: '#333', textDecoration: 'none', fontWeight: 500 }}>AI Playground</a>
+            <a style={{ color: router.pathname === '/playground' ? '#fff' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, fontSize: '0.95rem', transition: 'color 0.2s' }}>Playground</a>
           </Link>
         </nav>
       </header>
 
-      <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         {children}
-      </main>
+      </div>
 
       <footer style={{ 
         width: '100%', 
-        borderTop: '1px solid #eaeaea', 
+        borderTop: '1px solid var(--card-border)', 
         display: 'flex', 
         flexDirection: 'column', 
         justifyContent: 'center', 
         alignItems: 'center', 
-        padding: '2rem 0',
-        backgroundColor: '#fafafa'
+        padding: '3rem 2rem',
+        backgroundColor: '#000'
       }}>
-        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '1rem' }}>
+        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '1.5rem' }}>
           <Link href="/privacy-policy">
-            <a style={{ color: '#0070f3', textDecoration: 'none' }}>Privacy Policy</a>
+            <a style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Privacy Policy</a>
           </Link>
           <Link href="/terms-of-service">
-            <a style={{ color: '#0070f3', textDecoration: 'none' }}>Terms of Service</a>
+            <a style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}>Terms of Service</a>
           </Link>
         </div>
         <div>
@@ -63,9 +68,9 @@ export default function Layout({ children }) {
             href="https://hadiwijaya.co"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: '#666', textDecoration: 'none' }}
+            style={{ color: '#555', textDecoration: 'none', fontSize: '0.85rem' }}
           >
-            &copy; {new Date().getFullYear()} Hadiwijaya.co
+            &copy; {new Date().getFullYear()} Hadiwijaya.co. All rights reserved.
           </a>
         </div>
       </footer>
