@@ -41,6 +41,9 @@ export default function Layout({ children }) {
           <Link href="/playground">
             <a style={{ color: router.pathname === '/playground' ? '#fff' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, fontSize: '0.95rem', transition: 'color 0.2s' }}>Playground</a>
           </Link>
+          <Link href="/contact">
+            <a style={{ color: router.pathname === '/contact' ? '#fff' : 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, fontSize: '0.95rem', transition: 'color 0.2s' }}>Contact</a>
+          </Link>
         </nav>
       </header>
 
