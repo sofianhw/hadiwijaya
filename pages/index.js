@@ -4,10 +4,9 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Hadiwijaya | AI Consulting & Solutions</title>
-        <link rel="icon" href="/favicon.ico" />
         <meta name="keywords" content="AI consulting, artificial intelligence, hadiwijaya, sofian hadiwijaya, tech consultant" />
         <meta name="description" content="Hadiwijaya is an AI Consulting company providing cutting-edge artificial intelligence solutions, machine learning integrations, and a dedicated AI playground."/>
       </Head>
@@ -40,26 +39,6 @@ export default function Home() {
           </Link>
         </div>
       </main>
-
-      <footer className={styles.footer} style={{ flexDirection: 'column', padding: '2rem 0', height: 'auto' }}>
-        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '1rem' }}>
-          <Link href="/privacy-policy">
-            <a style={{ color: '#0070f3', textDecoration: 'none' }}>Privacy Policy</a>
-          </Link>
-          <Link href="/terms-of-service">
-            <a style={{ color: '#0070f3', textDecoration: 'none' }}>Terms of Service</a>
-          </Link>
-        </div>
-        <div>
-          <a
-            href="https://hadiwijaya.co"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            &copy; {new Date().getFullYear()} Hadiwijaya.co
-          </a>
-        </div>
-      </footer>
-    </div>
+    </>
   )
 }

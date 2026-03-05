@@ -1,10 +1,9 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function TermsOfService() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Terms of Service | Hadiwijaya</title>
       </Head>
@@ -26,33 +25,7 @@ export default function TermsOfService() {
 
         <h3 style={{ marginTop: '2rem' }}>4. Modifications and Interruptions</h3>
         <p>We reserve the right to change, modify, or remove the contents of the Site at any time or for any reason at our sole discretion without notice. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Site.</p>
-
-        <div style={{ marginTop: '3rem' }}>
-          <Link href="/">
-            <a style={{ color: '#0070f3', textDecoration: 'underline' }}>&larr; Back to Home</a>
-          </Link>
-        </div>
       </main>
-
-      <footer className={styles.footer} style={{ flexDirection: 'column', padding: '2rem 0', height: 'auto' }}>
-        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '1rem' }}>
-          <Link href="/privacy-policy">
-            <a style={{ color: '#0070f3', textDecoration: 'none' }}>Privacy Policy</a>
-          </Link>
-          <Link href="/terms-of-service">
-            <a style={{ color: '#0070f3', textDecoration: 'none' }}>Terms of Service</a>
-          </Link>
-        </div>
-        <div>
-          <a
-            href="https://hadiwijaya.co"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            &copy; {new Date().getFullYear()} Hadiwijaya.co
-          </a>
-        </div>
-      </footer>
-    </div>
+    </>
   )
 }
