@@ -285,6 +285,100 @@
   margin-top: 0.5rem;
 }
 
+/* Testimonial Carousel */
+.testimonialContainer {
+  margin-top: 6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonialCard {
+  padding: 3rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  min-height: 250px;
+  justify-content: center;
+}
+
+.quote {
+  font-size: 1.25rem;
+  color: #fff;
+  font-style: italic;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.authorName {
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  text-align: left;
+}
+
+.authorRole {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: left;
+}
+
+.carouselIndicators {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--card-border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.indicatorActive {
+  background: var(--accent-color);
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 3rem;

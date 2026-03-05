@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import TestimonialCarousel from '../components/TestimonialCarousel'
 
 export default function Home() {
   return (
@@ -57,6 +58,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <TestimonialCarousel />
       </main>
     </>
   )
