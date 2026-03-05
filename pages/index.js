@@ -39,6 +39,19 @@ export default function Home() {
             </a>
           </Link>
         </div>
+
+        <div className={styles.teamSection}>
+          <h2 className={styles.teamTitle}>The Team</h2>
+          <div className={styles.teamGrid}>
+            <div className={styles.teamCard}>
+              <h3 className={styles.teamName}>Sofian Hadiwijaya</h3>
+              <p className={styles.teamRole}>Founder & Principal AI Consultant</p>
+              <p className={styles.teamBio}>
+                Forbes 30 Under 30 Asia honoree and a visionary technology leader with deep expertise in AI, digital banking, and scalable architectures. With a proven track record of scaling innovative platforms across Southeast Asia—from co-founding Warung Pintar to driving tech evangelism—Sofian engineers sophisticated machine learning solutions that transform enterprises. Let's connect on <a href="https://www.linkedin.com/in/sofianhw/" target="_blank" rel="noopener noreferrer" style={{ color: '#3b82f6', textDecoration: 'underline' }}>LinkedIn</a>.
+              </p>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   )
